@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juha Vierinen | Instruments and visualizations</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        color-scheme: light;
+        --bg: #f4f6f8;
+        --ink: #101828;
+        --muted: #536171;
+        --line: #d7dee7;
+        --panel: #ffffff;
+        --accent: #0f766e;
+        --accent-dark: #114e4a;
+        --shadow: 0 18px 50px rgba(16, 24, 40, 0.12);
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .masthead {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 24px;
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 22px;
+      }
+
+      .identity {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 18px;
+      }
+
+      .portrait {
+        width: clamp(82px, 11vw, 124px);
+        aspect-ratio: 1;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(16, 24, 40, 0.14);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(28px, 5vw, 48px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.45;
+      }
+
+      .profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .profile-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--accent-dark);
+        font-size: 14px;
+        font-weight: 750;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      main {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 30px 0 42px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .tile {
+        display: grid;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        color: inherit;
+        text-decoration: none;
+        box-shadow: var(--shadow);
+        transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+      }
+
+      .tile:hover,
+      .tile:focus-visible {
+        border-color: rgba(15, 118, 110, 0.55);
+        box-shadow: 0 22px 60px rgba(15, 118, 110, 0.18);
+        outline: 0;
+        transform: translateY(-2px);
+      }
+
+      .tile img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: top center;
+        background: #dce3ea;
+      }
+
+      .tile-body {
+        display: grid;
+        gap: 6px;
+        padding: 14px 16px 16px;
+      }
+
+      .tile-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .tile-title span:last-child {
+        color: var(--accent);
+        font-size: 20px;
+        line-height: 1;
+      }
+
+      .tile p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 760px) {
+        .masthead {
+          grid-template-columns: 1fr;
+          align-items: start;
+        }
+
+        .profile-links {
+          justify-content: flex-start;
+        }
+
+        .identity {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+
+        .portrait {
+          width: 94px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="masthead">
+        <div class="identity">
+          <img class="portrait" src="./assets/juha-vierinen.jpg" alt="Portrait of Juha Vierinen">
+          <div>
+            <h1>Juha Vierinen</h1>
+            <p class="subtitle">Space Physics Professor at University of Tromsø, working with radars and space physics. This is my personal home page.</p>
+          </div>
+        </div>
+        <nav class="profile-links" aria-label="Profiles">
+          <a class="profile-link" href="https://orcid.org/0000-0001-7651-708X" target="_blank" rel="noopener">ORCID</a>
+          <a class="profile-link" href="https://scholar.google.com/citations?view_op=search_authors&mauthors=Juha+Vierinen&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="profile-link" href="https://en.uit.no/ansatte/juha-pekka.vierinen" target="_blank" rel="noopener">UiT</a>
+          <a class="profile-link" href="https://github.com/jvierine" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid" aria-label="Projects">
+        <a class="tile" href="/bolide/">
+          <img src="./assets/bolide.png" alt="Screenshot of the Cape Cod Bay bolide WebGL visualization">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>Cape Cod Bay Bolide</span><span aria-hidden="true">-></span></h2>
+            <p>WebGL visualization of MIT Haystack multi-static radar plasma measurements, ballistic fit, and strewn-field simulation.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/aida/">
+          <img src="./assets/aida.png" alt="Screenshot of the AIDA widefield star calibrator">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>AIDA</span><span aria-hidden="true">-></span></h2>
+            <p>Widefield star calibrator for all-sky imagery and catalog matching.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/meteors/">
+          <img src="./assets/meteors.png" alt="Screenshot of the MAARSY meteor orbit visualizer">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>Meteors</span><span aria-hidden="true">-></span></h2>
+            <p>Interactive MAARSY meteor orbit visualization and shower filtering.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/radiantviz/">
+          <img src="./assets/radiantviz.png" alt="Screenshot of the Radiantviz meteor radiant viewer">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>Radiantviz</span><span aria-hidden="true">-></span></h2>
+            <p>Interactive radiant, velocity, and orbit viewer for PANSY and MAARSY meteor detections.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/55p/">
+          <img src="./assets/55p-tempel-tuttle-webgl.png" alt="Screenshot of the 55P/Tempel-Tuttle orbit evolution visualization">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>55P/Tempel-Tuttle</span><span aria-hidden="true">-></span></h2>
+            <p>Interactive WebGL visualization of secular Jupiter perturbations and Poynting-Robertson drag.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/bernstein/">
+          <img src="./assets/bernstein.png" alt="Screenshot of the Bernstein waves visualization">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>Bernstein Waves</span><span aria-hidden="true">-></span></h2>
+            <p>Interactive magnetic-meridian view of Sanya ISR geometry and field-aligned plasma structure.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/misa/">
+          <img src="./assets/misa.jpg" alt="Screenshot of the MISA low-elevation radar sweep visualization">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>MISA Horizon Sweep</span><span aria-hidden="true">-></span></h2>
+            <p>Interactive visualization of Millstone Hill's low-elevation radar scan during the 8 April 2024 solar eclipse.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/iono/">
+          <img src="./assets/iono.png" alt="Screenshot of the ionosonde dashboard">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>Ionosonde</span><span aria-hidden="true">-></span></h2>
+            <p>Live oblique sounding dashboard with station status and ionograms.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/pansy/">
+          <img src="./assets/pansy.png" alt="Screenshot of the PANSY meteor extension monitor">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>PANSY</span><span aria-hidden="true">-></span></h2>
+            <p>Meteor extension monitor for recent detections and processing status.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/sanya_head_echo/">
+          <img src="./assets/sanya-tristatic.png" alt="Screenshot of the Sanya tri-static meteor head echo WebGL visualization">
+          <div class="tile-body">
+            <h2 class="tile-title"><span>Sanya Tri-static</span><span aria-hidden="true">-></span></h2>
+            <p>WebGL visualization of tri-static meteor head echo trajectories from Sanya, Danzhou, and Wenchang.</p>
+          </div>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
