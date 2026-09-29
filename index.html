@@ -164,6 +164,12 @@
         line-height: 1.45;
       }
 
+      .tile time {
+        color: var(--accent);
+        font: 750 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0.04em;
+      }
+
       @media (max-width: 760px) {
         .masthead {
           grid-template-columns: 1fr;
@@ -210,18 +216,101 @@
 
     <main>
       <div class="grid" aria-label="Projects">
+        <a class="tile" href="/currents/">
+          <img src="./assets/currents.png" alt="Magnetosphere current explorer showing the red Region 1 sheet and green Chapman–Ferraro currents">
+          <div class="tile-body">
+            <time datetime="2026-09-29">29 Sep 2026</time>
+            <h2 class="tile-title"><span>Magnetosphere Currents</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Explore three-dimensional magnetosphere–ionosphere current systems, including Region 1 and Region 2, ring and tail currents, and Chapman–Ferraro shielding.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/momap/">
+          <img src="./assets/momap.png" alt="Screenshot of the MOMAP orienteering map editor">
+          <div class="tile-body">
+            <time datetime="2026-08-25">25 Aug 2026</time>
+            <h2 class="tile-title"><span>MOMAP</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Collaborative browser editor for orienteering maps, field mapping, course setting, and print-ready exports.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/bella/">
+          <img src="./assets/bella.png" alt="Screenshot of the Bella EISCAT magnetic field-line explorer">
+          <div class="tile-body">
+            <time datetime="2026-08-25">25 Aug 2026</time>
+            <h2 class="tile-title"><span>Bella</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Interactive EISCAT magnetic field-line explorer with T96 equatorial mapping.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/signal/">
+          <img src="./assets/signal.png" alt="Screenshot of the Signal Processing Course demonstrations">
+          <div class="tile-body">
+            <time datetime="2026-08-25">25 Aug 2026</time>
+            <h2 class="tile-title"><span>Signal Processing</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Interactive course demonstrations for phasors, multidimensional sinusoids, plane waves, and related concepts.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/55p/">
+          <img src="./assets/55p-tempel-tuttle-webgl.png" alt="Screenshot of the 55P/Tempel-Tuttle orbit evolution visualization">
+          <div class="tile-body">
+            <time datetime="2026-08-21">21 Aug 2026</time>
+            <h2 class="tile-title"><span>55P/Tempel-Tuttle</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Interactive WebGL visualization of secular Jupiter perturbations and Poynting-Robertson drag.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/misa/">
+          <img src="./assets/misa.jpg" alt="Screenshot of the MISA low-elevation radar sweep visualization">
+          <div class="tile-body">
+            <time datetime="2026-08-21">21 Aug 2026</time>
+            <h2 class="tile-title"><span>MISA Horizon Sweep</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Interactive visualization of Millstone Hill's low-elevation radar scan during the 8 April 2024 solar eclipse.</p>
+          </div>
+        </a>
+
         <a class="tile" href="/bolide/">
           <img src="./assets/bolide.png" alt="Screenshot of the Cape Cod Bay bolide WebGL visualization">
           <div class="tile-body">
-            <h2 class="tile-title"><span>Cape Cod Bay Bolide</span><span aria-hidden="true">-></span></h2>
+            <time datetime="2026-08-03">3 Aug 2026</time>
+            <h2 class="tile-title"><span>Cape Cod Bay Bolide</span><span aria-hidden="true">-&gt;</span></h2>
             <p>WebGL visualization of MIT Haystack multi-static radar plasma measurements, ballistic fit, and strewn-field simulation.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/radiantviz/">
+          <img src="./assets/radiantviz.png" alt="Screenshot of the Radiantviz meteor radiant viewer">
+          <div class="tile-body">
+            <time datetime="2026-08-03">3 Aug 2026</time>
+            <h2 class="tile-title"><span>Radiantviz</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Interactive radiant, velocity, and orbit viewer for PANSY and MAARSY meteor detections.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/bernstein/">
+          <img src="./assets/bernstein.png" alt="Screenshot of the Bernstein waves visualization">
+          <div class="tile-body">
+            <time datetime="2026-08-03">3 Aug 2026</time>
+            <h2 class="tile-title"><span>Bernstein Waves</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>Interactive magnetic-meridian view of Sanya ISR geometry and field-aligned plasma structure.</p>
+          </div>
+        </a>
+
+        <a class="tile" href="/sanya_head_echo/">
+          <img src="./assets/sanya-tristatic.png" alt="Screenshot of the Sanya tri-static meteor head echo WebGL visualization">
+          <div class="tile-body">
+            <time datetime="2026-08-03">3 Aug 2026</time>
+            <h2 class="tile-title"><span>Sanya Tri-static</span><span aria-hidden="true">-&gt;</span></h2>
+            <p>WebGL visualization of tri-static meteor head echo trajectories from Sanya, Danzhou, and Wenchang.</p>
           </div>
         </a>
 
         <a class="tile" href="/aida/">
           <img src="./assets/aida.png" alt="Screenshot of the AIDA widefield star calibrator">
           <div class="tile-body">
-            <h2 class="tile-title"><span>AIDA</span><span aria-hidden="true">-></span></h2>
+            <time datetime="2026-06-04">4 Jun 2026</time>
+            <h2 class="tile-title"><span>AIDA</span><span aria-hidden="true">-&gt;</span></h2>
             <p>Widefield star calibrator for all-sky imagery and catalog matching.</p>
           </div>
         </a>
@@ -229,47 +318,17 @@
         <a class="tile" href="/meteors/">
           <img src="./assets/meteors.png" alt="Screenshot of the MAARSY meteor orbit visualizer">
           <div class="tile-body">
-            <h2 class="tile-title"><span>Meteors</span><span aria-hidden="true">-></span></h2>
+            <time datetime="2026-06-04">4 Jun 2026</time>
+            <h2 class="tile-title"><span>Meteors</span><span aria-hidden="true">-&gt;</span></h2>
             <p>Interactive MAARSY meteor orbit visualization and shower filtering.</p>
-          </div>
-        </a>
-
-        <a class="tile" href="/radiantviz/">
-          <img src="./assets/radiantviz.png" alt="Screenshot of the Radiantviz meteor radiant viewer">
-          <div class="tile-body">
-            <h2 class="tile-title"><span>Radiantviz</span><span aria-hidden="true">-></span></h2>
-            <p>Interactive radiant, velocity, and orbit viewer for PANSY and MAARSY meteor detections.</p>
-          </div>
-        </a>
-
-        <a class="tile" href="/55p/">
-          <img src="./assets/55p-tempel-tuttle-webgl.png" alt="Screenshot of the 55P/Tempel-Tuttle orbit evolution visualization">
-          <div class="tile-body">
-            <h2 class="tile-title"><span>55P/Tempel-Tuttle</span><span aria-hidden="true">-></span></h2>
-            <p>Interactive WebGL visualization of secular Jupiter perturbations and Poynting-Robertson drag.</p>
-          </div>
-        </a>
-
-        <a class="tile" href="/bernstein/">
-          <img src="./assets/bernstein.png" alt="Screenshot of the Bernstein waves visualization">
-          <div class="tile-body">
-            <h2 class="tile-title"><span>Bernstein Waves</span><span aria-hidden="true">-></span></h2>
-            <p>Interactive magnetic-meridian view of Sanya ISR geometry and field-aligned plasma structure.</p>
-          </div>
-        </a>
-
-        <a class="tile" href="/misa/">
-          <img src="./assets/misa.jpg" alt="Screenshot of the MISA low-elevation radar sweep visualization">
-          <div class="tile-body">
-            <h2 class="tile-title"><span>MISA Horizon Sweep</span><span aria-hidden="true">-></span></h2>
-            <p>Interactive visualization of Millstone Hill's low-elevation radar scan during the 8 April 2024 solar eclipse.</p>
           </div>
         </a>
 
         <a class="tile" href="/iono/">
           <img src="./assets/iono.png" alt="Screenshot of the ionosonde dashboard">
           <div class="tile-body">
-            <h2 class="tile-title"><span>Ionosonde</span><span aria-hidden="true">-></span></h2>
+            <time datetime="2026-06-04">4 Jun 2026</time>
+            <h2 class="tile-title"><span>Ionosonde</span><span aria-hidden="true">-&gt;</span></h2>
             <p>Live oblique sounding dashboard with station status and ionograms.</p>
           </div>
         </a>
@@ -277,16 +336,9 @@
         <a class="tile" href="/pansy/">
           <img src="./assets/pansy.png" alt="Screenshot of the PANSY meteor extension monitor">
           <div class="tile-body">
-            <h2 class="tile-title"><span>PANSY</span><span aria-hidden="true">-></span></h2>
+            <time datetime="2026-06-04">4 Jun 2026</time>
+            <h2 class="tile-title"><span>PANSY</span><span aria-hidden="true">-&gt;</span></h2>
             <p>Meteor extension monitor for recent detections and processing status.</p>
-          </div>
-        </a>
-
-        <a class="tile" href="/sanya_head_echo/">
-          <img src="./assets/sanya-tristatic.png" alt="Screenshot of the Sanya tri-static meteor head echo WebGL visualization">
-          <div class="tile-body">
-            <h2 class="tile-title"><span>Sanya Tri-static</span><span aria-hidden="true">-></span></h2>
-            <p>WebGL visualization of tri-static meteor head echo trajectories from Sanya, Danzhou, and Wenchang.</p>
           </div>
         </a>
       </div>
